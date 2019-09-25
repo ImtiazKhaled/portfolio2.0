@@ -1,0 +1,14 @@
+@import '~antd/dist/antd.css';
+
+body{
+    background-color: aquamarine;
+}
+
+.landing-page{
+    min-height: 100vh;
+}
+
+.landing-page-name{
+    font-size: 10em;
+    color: white;
+}
