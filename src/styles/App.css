@@ -4,11 +4,27 @@ body{
     background-color: aquamarine;
 }
 
-.landing-page{
+.full-page{
     min-height: 100vh;
 }
 
 .landing-page-name{
-    font-size: 10em;
+    font-size: 5em;
     color: white;
+}
+
+.landing-page-who-container{
+    min-height: 15vh; 
+}
+
+.landing-page-who{
+    font-size: 6em;
+}
+
+.display-inline{
+    display: inline;
+}
+
+.background{
+    background-color: aquamarine;
 }
