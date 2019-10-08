@@ -8,14 +8,12 @@ class WhoPage extends React.Component {
     render() {
         return (
             <div className='full-page'>
-                <Row>
-                    {
-                        who.map(about =>
-                            <Col key={about.id} span={12}>
-                                <WhoCard about={about} />
-                            </Col>
-                        )
-                    }
+                <Row className='card-container'>
+                    {who.map(about =>
+                        <Col key={about.id} sm={{ span: 24 }} md={{ span: 12 }}>
+                            <WhoCard about={about} />
+                        </Col>
+                    )}
                 </Row>
 
             </div>

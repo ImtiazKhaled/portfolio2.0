@@ -8,9 +8,9 @@ class WorkPage extends React.Component {
     render() {
         return (
             <div className='full-page'>
-                <Row>
+                <Row className='card-container'>
                     {work.map(work =>
-                        <Col span={12}>
+                        <Col key={work.id} sm={{span:24}} md={{span:12}}>
                             <WorkCards work={work} />
                         </Col>
                     )}

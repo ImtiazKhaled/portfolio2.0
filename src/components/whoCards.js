@@ -8,21 +8,19 @@ class WhoCard extends React.Component {
         const { about } = this.props
         return ( 
             <Card className='background'>
-                <div>
-                    {about.tabName}
-                </div>
-                <div>
+                <div className='who-card-title'>
                     {about.title}
                 </div>
-                <div>
+                <div className='who-card-subtitle'>
                     {about.subtitle}
                 </div>
-                <div>
+                <div className='who-card-duration'>
                     {about.duration}
                 </div>
                 {
                     about.description.map(
-                        description => <div>
+                        description => 
+                        <div key={description}>
                             {description}
                         </div>
                     )

@@ -5,7 +5,7 @@ class LandingPage extends React.Component {
 
     render() {
         return (
-            <div className='full-page'>
+            <div className='full-page landing-page'>
                 Hi, I'm <span className='landing-page-name'>Imtiaz Khaled</span> a
                 <div className='landing-page-who-container'>
                     <Carousel dotPosition={'left'} dots={false} autoplay={true}>

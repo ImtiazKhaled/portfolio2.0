@@ -14,7 +14,7 @@ export const work = [
         stack: ['reactJS', 'nodeJS'],
     },
     {
-        id: "4",
+        id: "2",
         type: "Personal Project",
         logo: 'lockout',
         title: 'lockout tracker',
@@ -28,7 +28,7 @@ export const work = [
         stack: ['react', 'firebase'],
     },
     {
-        id: "5",
+        id: "3",
         type: "Personal Project",
         logo: 'me',
         title: 'this website',
@@ -42,7 +42,7 @@ export const work = [
         stack: ['react'],
     },
     {
-        id: "2",
+        id: "4",
         type: "Personal Project",
         logo: 'subbey',
         title: 'subbey',
@@ -56,7 +56,7 @@ export const work = [
         stack: ['flutter'],
     },
     {
-        id: "3",
+        id: "5",
         type: "Personal Project",
         logo: 'finess',
         title: 'finess',

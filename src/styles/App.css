@@ -8,6 +8,11 @@ body{
     min-height: 100vh;
 }
 
+.landing-page{
+    text-align: center;
+    padding: '20vw';
+}
+
 .landing-page-name{
     font-size: 5em;
     color: white;
@@ -21,10 +26,49 @@ body{
     font-size: 6em;
 }
 
-.display-inline{
-    display: inline;
+.who-card-title{
+    font-size: 3em;
+    color: brown;
+}
+
+.who-card-subtitle{
+    font-size: 2em;
+    color: red;
+}
+
+.who-card-duration{
+    font-size: 1.5em;
+    color: blue;
+}
+
+.contact-normal{
+    text-align: center;
+    font-size: 2em;    
+}
+.contact-special{
+    color: purple;
+    font-size: 1.2em;
+}
+
+.contact-email{
+    color: pink;
+    font-size: 2em;
+}
+
+.contact-specialOne{
+    color: white;
+    font-size: 2em;
+}
+
+
+.card-container{
+    padding: 10vh;
 }
 
 .background{
-    background-color: aquamarine;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 5vh;
 }
+
+
