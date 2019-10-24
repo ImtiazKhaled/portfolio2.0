@@ -5,32 +5,34 @@ import { CustomIcons } from './customIcons'
 class WorkCards extends React.Component {
     state = {
         iconStyle: {
-            fontSize: '3em',        
-            color: 'black',
+            fontSize: '1.5em',
+            color: '#f78c6c',
         }
     }
     render() {
         const { work } = this.props
         return (
-            <Card className='background' hoverable >
-                <div>
-                    {work.title}
-                </div>
-                <div>
-                    <CustomIcons type={work.logo} IconStyles={this.state.iconStyle} />
-                </div>
-                <div>
-                    {work.description}
-                </div>
-                <div>
-                    {
-                        work.stack.map(
-                            project => 
-                            <Tag key={project}>
-                                {project}
-                            </Tag>
-                        )
-                    }
+            <Card className='background'>
+                <div className='work-card'>
+                    <div className='work-card-subtitle'>
+                        <CustomIcons type={work.logo} IconStyles={this.state.iconStyle} />
+                    </div>
+                    <div className='work-card-title'>
+                        {work.title}
+                    </div>
+                    <div className='work-card-description'>
+                        {work.description}
+                    </div>
+                    <div>
+                        {
+                            work.stack.map(
+                                project =>
+                                    <Tag key={project}>
+                                        {project}
+                                    </Tag>
+                            )
+                        }
+                    </div>
                 </div>
             </Card>
         );

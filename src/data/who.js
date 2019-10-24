@@ -6,9 +6,10 @@ export const who = [
         subtitleLink: 'https://www.uta.edu/uta/',
         duration: 'august 2017 - may 2021',
         description: [
-            'I am apart of the Honors Program here at UTA(University of Texas at Arlington).',
-            'Boasting a CGPA of 3.89, I really enjoy my time here.',
-            'I also work on campus as a Resident Assistant.',
+            'Throughout my time at UT Arlington, I picked up a lot of knowledge in the ﬁeld of Computer Science, both inside and outside of the class.',
+            'I am on the Engineering Dean\'s List of UT Arlington.',
+            'My major GPA is 4.00, and my CGPA is 3.90 and.',
+            'On campus I also hold one of the most pretegious leadership roles as a Resident Assistant.',
         ],
     },
     {
@@ -25,12 +26,14 @@ export const who = [
     },
     {
         id: '3',
-        title: 'Hackthon Enthusiast',
+        title: 'Hackathon Enthusiast',
+        subtitle: '@devpost',
+        subtitleLink: 'https://bluetechbd.com/',
         duration: 'forever and always',
         description: [
             'My journey started at HackUTA 2018, and since then it has not stopped.',
-            'I like to spend as many weekends I can at hackthons, there is something in the competitive vibe that hackathons have, that keeps me going back.',
-            'My Team and I have won most of the hackthons we have been too, and hope we will win even more of them in the future.'
+            'I like to spend as many weekends I can at hackathons, there is something in the competitive vibe that hackathons have, that keeps me going back.',
+            'My Team and I have won most of the hackathons we have been too, and hope we will win even more of them in the future.'
         ],
     },
     {
@@ -38,9 +41,10 @@ export const who = [
         title: 'Hobbyist',
         duration: 'also forever and always',
         description: [
-            'Apart from programming, I like to spend my time playing game. I am a big fan of fantasy games, and am always down to play a round or two of Destiny on my PS4.',
-            'Along with my hobby for gaming, I also like to spend my time watching TV series or movies with family/freiends.',
-            'This may sound cliché, but I find myself spending a majority of time, working on little side projects that help me sharpen my skills as a programmer.'
+            'Apart from programming, I like to spend my time playing games. I am a big fan of fantasy games and am always down to play a round or two of Destiny on my PS4.',
+            'Along with my hobby for gaming, I also like to spend my time watching TV series or movies with family/friends.',
+            'This may sound cliché, but I find myself spending the majority of the time, working on little side projects that help me sharpen my skills as a programmer.'
         ],
     },
 ];
+

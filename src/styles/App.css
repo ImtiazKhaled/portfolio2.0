@@ -1,65 +1,119 @@
 @import '~antd/dist/antd.css';
 
 body{
-    background-color: aquamarine;
+    background-color: #011627;
 }
 
 .full-page{
     min-height: 100vh;
+    padding-top: 25vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 .landing-page{
     text-align: center;
-    padding: '20vw';
 }
 
 .landing-page-name{
-    font-size: 5em;
-    color: white;
+    font-size: 3em;    
+    color: #f78c6c;
 }
 
 .landing-page-who-container{
-    min-height: 15vh; 
+    min-height: 2vh; 
 }
 
 .landing-page-who{
-    font-size: 6em;
+    font-size: 2em;
+    color: #22da6e;    
+}
+
+.landing-text{
+    color: #637777;
+    font-size: 1.7em;
+}
+
+.who-card{
+    font-size: 1em;
 }
 
 .who-card-title{
     font-size: 3em;
-    color: brown;
+    color: #22da6e;
 }
 
 .who-card-subtitle{
     font-size: 2em;
-    color: red;
+    color: #f78c6c;    
+}
+
+.who-card-subtitle:hover{
+    color: #f86c6c;
 }
 
 .who-card-duration{
     font-size: 1.5em;
-    color: blue;
+    color: #00cccc;    
+}
+
+.who-card-description{
+    font-size: 1.5em;
+    color: #637777;
+}
+
+.work-card{
+    font-size: 1em;
+}
+
+.work-card-title{
+    font-size: 3em;
+    color: #22da6e;
+}
+
+.work-card-subtitle{
+    font-size: 2em;
+    color: #f78c6c;    
+}
+
+.work-card-subtitle:hover{
+    color: #f86c6c;
+}
+
+.work-card-duration{
+    font-size: 1.5em;
+    color: #00cccc;    
+}
+
+.work-card-description{
+    font-size: 1.5em;
+    color: #637777;
 }
 
 .contact-normal{
     text-align: center;
-    font-size: 2em;    
 }
+
+.contact-text{
+    color: #637777;
+    font-size: 2.6em;
+}
+
 .contact-special{
-    color: purple;
-    font-size: 1.2em;
+    color: #00cccc;
 }
 
 .contact-email{
-    color: pink;
-    font-size: 2em;
+    color: #f78c6c;
+}
+
+.contact-email:hover{
+    color: #f86c6c;
 }
 
 .contact-specialOne{
-    color: white;
-    font-size: 2em;
+    color: #22da6e;
 }
-
 
 .card-container{
     padding: 10vh;
