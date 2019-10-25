@@ -1,16 +1,17 @@
 import React from 'react'
 import WorkCards from '../components/workCards'
 import { work } from '../data/work'
-import { Row, Col } from 'antd'
+import { Row, Col, Divider } from 'antd'
 
 class WorkPage extends React.Component {
     state = {}
     render() {
         return (
             <div className='full-page'>
+                <Divider className='divider'><span className='divider-text'> 2. What do I do?  </span></Divider>
                 <Row className='card-container'>
                     {work.map(work =>
-                        <Col key={work.id} sm={{span:24}} md={{span:12}}>
+                        <Col key={work.id} md={{ span: 24 }} lg={{ span: 12 }}>
                             <WorkCards work={work} />
                         </Col>
                     )}

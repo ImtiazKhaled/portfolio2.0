@@ -18,7 +18,7 @@ class LandingPage extends React.Component {
                         </div>
                         </Carousel>
                     </div>
-                    majoring in <span> Computer Science </span><Tag> Contact Me </Tag>or scroll to get to know more about me
+                    majoring in <span> Computer Science </span><Tag><a href='mailto:imtiazkhaled07@gmail.com'> Contact Me </a></Tag>or scroll to get to know more about me
                 </span>
             </div>
 

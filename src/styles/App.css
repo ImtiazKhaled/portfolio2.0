@@ -1,145 +1,238 @@
 @import '~antd/dist/antd.css';
-
-body{
-    background-color: #011627;
+:root {
+    --background-color: #011627;
+    --link-color: #f78c6c;
+    --link-color-hover: #f86c6c;
+    --special-text-color: #22da6e;
+    --normal-text-color: #637777;
+    --special-text-color-two: #00cccc;
+    --alternate-background: #eeeeee;
+    --text-size: 0.90em;
+    --text-size-contact: 1.9em;
+    --divider-text: 3em;
+    --resume-button-padding: 35vw
 }
 
-.full-page{
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --text-size: 0.75em;
+        --text-size-contact: 1.4em;
+        --divider-text: 1.2em;
+        --resume-button-padding: 5vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    :root {
+        --text-size: 0.90em;
+        --text-size-contact: 1.9em;
+        --divider-text: 1.5em;
+        --resume-button-padding: 15vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    :root {
+        --text-size: 0.90em;
+        --text-size-contact: 1.9em;
+        --divider-text: 2em;
+        --resume-button-padding: 30vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    :root {
+        --text-size: 0.90em;
+        --text-size-contact: 1.9em;
+        --divider-text: 2.3em;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+/* @media only screen and (min-width: 1200px) {
+    :root{
+        --text-size: 0.90em;
+        --text-size-contact: 1.9em;
+        --divider-text: 2em;
+
+    }    
+} */
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Source Code Pro', monospace;
+}
+
+.full-page {
     min-height: 100vh;
     padding-left: 5vh;
     padding-right: 5vh;
 }
 
-.landing-page{
+.resume-button {
+    background: var(--alternate-background);
+    color: var(--background-color);
+}
+
+.resume-button:hover {
+    background: var(--background-color);
+    color: var(--alternate-background);
+}
+
+
+.resume-button:active {
+    background: var(--background-color);
+    color: var(--alternate-background);
+}
+
+.resume-button-container {
+    padding-top: 4vh;
+    padding-left: var(--resume-button-padding);
+}
+
+.theme-identifier {
+    color: var(--alternate-background);
+}
+
+.theme-button {
+    background: var(--alternate-background);
+}
+
+.theme-container {
+    padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.landing-page {
     padding-top: 25vh;
     text-align: center;
+    font-size: var(--text-size);
 }
 
-.divider{
-    color: #22da6e;
-    padding-left: 10vh;
-    padding-right: 10vh;
+.divider {
+    color: var(--special-text-color);
 }
 
-.divider-special{
-    padding-left: 5vh;
-    padding-right: 5vh;
+.divider-text {
+    color: var(--special-text-color-two);
+    font-size: var(--divider-text);
 }
 
-.divider-text{
-    color: #00cccc;    
+.landing-page-name {
+    font-size: 3em;
+    color: var(--link-color);
+}
+
+.landing-page-who-container {
+    min-height: 2vh;
+}
+
+.landing-page-who {
     font-size: 2em;
+    color: var(--special-text-color);
 }
 
-.landing-page-name{
-    font-size: 3em;    
-    color: #f78c6c;
-}
-
-.landing-page-who-container{
-    min-height: 2vh; 
-}
-
-.landing-page-who{
-    font-size: 2em;
-    color: #22da6e;    
-}
-
-.landing-text{
-    color: #637777;
+.landing-text {
+    color: var(--normal-text-color);
     font-size: 1.7em;
 }
 
-.who-card{
-    font-size: 1em;
+.who-card {
+    font-size: var(--text-size);
 }
 
-.who-card-title{
+.who-card-title {
     font-size: 3em;
-    color: #22da6e;
+    color: var(--special-text-color);
 }
 
-.who-card-subtitle{
+.who-card-subtitle {
     font-size: 2em;
-    color: #f78c6c;    
+    color: var(--link-color);
 }
 
-.who-card-subtitle:hover{
-    color: #f86c6c;
+.who-card-subtitle:hover {
+    color: var(--link-color-hover);
 }
 
-.who-card-duration{
-    font-size: 1.5em;
-    color: #00cccc;    
+.who-card-duration {
+    font-size: 1.72em;
+    color: var(--special-text-color-two);
 }
 
-.who-card-description{
-    font-size: 1.5em;
-    color: #637777;
+.who-card-description {
+    font-size: 1.72em;
+    color: var(--normal-text-color);
 }
 
-.work-card{
-    font-size: 1em;
+.work-card {
+    font-size: var(--text-size);
 }
 
-.work-card-title{
-    font-size: 3em;
-    color: #22da6e;
+.work-card-title {
+    font-size: 2.5em;
+    color: var(--special-text-color);
 }
 
-.work-card-subtitle{
+.work-card-subtitle {
     font-size: 2em;
-    color: #f78c6c;    
+    color: var(--link-color);
 }
 
-.work-card-subtitle:hover{
-    color: #f86c6c;
+.work-card-subtitle:hover {
+    color: var(--link-color-hover);
 }
 
-.work-card-duration{
+.work-card-duration {
     font-size: 1.5em;
-    color: #00cccc;    
+    color: var(--special-text-color-two);
 }
 
-.work-card-description{
+.work-card-description {
     font-size: 1.5em;
-    color: #637777;
+    color: var(--normal-text-color);
 }
 
-.contact-normal{
+.contact-normal {
     text-align: center;
     padding-top: 25vh;
 }
 
-.contact-text{
-    color: #637777;
-    font-size: 2.6em;
+.contact-text {
+    color: var(--normal-text-color);
+    font-size: var(--text-size-contact);
 }
 
-.contact-special{
-    color: #00cccc;
+.contact-special {
+    color: var(--special-text-color-two);
 }
 
-.contact-email{
-    color: #f78c6c;
+.contact-email {
+    color: var(--link-color);
 }
 
-.contact-email:hover{
-    color: #f86c6c;
+.contact-email:hover {
+    color: var(--link-color-hover);
 }
 
-.contact-specialOne{
-    color: #22da6e;
+.contact-specialOne {
+    color: var(--special-text-color);
 }
 
-.card-container{
-    padding: 10vh;
+.card-container {
+    padding: 1vw;
 }
 
-.background{
+.background {
     background-color: transparent;
     border-color: transparent;
-    padding: 5vh;
 }
-
-
