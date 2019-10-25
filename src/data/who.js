@@ -28,7 +28,7 @@ export const who = [
         id: '3',
         title: 'Hackathon Enthusiast',
         subtitle: '@devpost',
-        subtitleLink: 'https://bluetechbd.com/',
+        subtitleLink: 'https://devpost.com/ImtiazMujtabaKhaled?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav',
         duration: 'forever and always',
         description: [
             'My journey started at HackUTA 2018, and since then it has not stopped.',

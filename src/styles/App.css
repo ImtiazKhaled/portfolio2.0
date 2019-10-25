@@ -6,13 +6,29 @@ body{
 
 .full-page{
     min-height: 100vh;
-    padding-top: 25vh;
     padding-left: 5vh;
     padding-right: 5vh;
 }
 
 .landing-page{
+    padding-top: 25vh;
     text-align: center;
+}
+
+.divider{
+    color: #22da6e;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.divider-special{
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.divider-text{
+    color: #00cccc;    
+    font-size: 2em;
 }
 
 .landing-page-name{
@@ -92,6 +108,7 @@ body{
 
 .contact-normal{
     text-align: center;
+    padding-top: 25vh;
 }
 
 .contact-text{
