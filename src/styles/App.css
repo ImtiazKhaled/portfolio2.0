@@ -56,17 +56,6 @@
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-
-/* @media only screen and (min-width: 1200px) {
-    :root{
-        --text-size: 0.90em;
-        --text-size-contact: 1.9em;
-        --divider-text: 2em;
-
-    }    
-} */
-
 body {
     background-color: var(--background-color);
     font-family: 'Source Code Pro', monospace;
@@ -74,8 +63,8 @@ body {
 
 .full-page {
     min-height: 100vh;
-    padding-left: 5vh;
-    padding-right: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .resume-button {
