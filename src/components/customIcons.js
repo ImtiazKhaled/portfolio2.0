@@ -132,32 +132,31 @@ const FinessSvg = (props) => (
        </svg>
     );
 
-export const DevpostIcon = props => <Icon component={() => <DevpostSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color} />}/>;
-export const GithubIcon = props => <Icon style={props.IconStyles} component={() => <GithubSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
-export const LinkedInIcon = props => <Icon style={props.IconStyles} component={() => <LinkedInSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
-export const EdunateIcon = props => <Icon style={props.IconStyles} component={() => <EdunateSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
-export const FinessIcon = props => <Icon style={props.IconStyles} component={() => <FinessSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
-export const MeIcon = props => <Icon style={props.IconStyles} component={() => <MeSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
-export const WebsiteIcon = props => <Icon component={() => <WebsiteSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
-export const SubbeyIcon = props => <Icon type='bar-chart' style={props.IconStyles} />;
-export const LockoutIcon = props => <Icon type='key' style={props.IconStyles} />;
+export const DevpostIcon = ( props ) => <Icon component={() => <DevpostSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color} />}/>;
+export const GithubIcon = ( props ) => <Icon style={props.IconStyles} component={() => <GithubSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
+export const LinkedInIcon = ( props ) => <Icon style={props.IconStyles} component={() => <LinkedInSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
+export const EdunateIcon = ( props ) => <Icon style={props.IconStyles} component={() => <EdunateSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
+export const FinessIcon = ( props ) => <Icon style={props.IconStyles} component={() => <FinessSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
+export const MeIcon = ( props ) => <Icon style={props.IconStyles} component={() => <MeSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
+export const WebsiteIcon = ( props ) => <Icon component={() => <WebsiteSvg fontSize={props.IconStyles.fontSize} fill={props.IconStyles.color}/>}/>;
+export const SubbeyIcon = ( props ) => <Icon type='bar-chart' style={props.IconStyles} />;
+export const LockoutIcon = ( props ) => <Icon type='key' style={props.IconStyles} />;
 
-export class CustomIcons extends React.Component {
-   render() {
-      switch(this.props.type) {
-         case 'edunate':
-            return <EdunateIcon IconStyles={this.props.IconStyles} />;
-            case 'finess':
-            return <FinessIcon IconStyles={this.props.IconStyles} />;
-            case 'subbey':
-            return <SubbeyIcon IconStyles={this.props.IconStyles} />;
-            case 'lockout':
-            return <LockoutIcon IconStyles={this.props.IconStyles} />;
-            case 'me':
-            return <MeIcon IconStyles={this.props.IconStyles} />;
-            default:
-            return <Icon type='folder' style={this.props.IconStyles} />;
-      }
+const CustomIcons = (props) => {
+   switch(props.type) {
+      case 'edunate':
+         return <EdunateIcon IconStyles={props.IconStyles} />;
+         case 'finess':
+         return <FinessIcon IconStyles={props.IconStyles} />;
+         case 'subbey':
+         return <SubbeyIcon IconStyles={props.IconStyles} />;
+         case 'lockout':
+         return <LockoutIcon IconStyles={props.IconStyles} />;
+         case 'me':
+         return <MeIcon IconStyles={props.IconStyles} />;
+         default:
+         return <Icon type='folder' style={props.IconStyles} />;
    }
 }
    
+export default CustomIcons
