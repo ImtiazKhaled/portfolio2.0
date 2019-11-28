@@ -177,6 +177,11 @@ body {
     color: var(--link-color);
 }
 
+.work-card-links-title {
+    font-size: 1.6em;
+    color: var(--special-text-color-two);    
+}
+
 .work-card-subtitle:hover {
     color: var(--link-color-hover);
 }

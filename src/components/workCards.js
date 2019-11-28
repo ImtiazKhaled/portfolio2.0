@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
-import { Card, Tag } from 'antd'
+import { Card, Tag, Row, Col } from 'antd'
 import CustomIcons from './customIcons'
 
 const WorkCards = (props) => {
     const [iconStyle, changeIconStyle] = useState({
-        fontSize: '1.5em',
+        fontSize: '2em',
         color: '#f78c6c',
     }) 
-
+    
+    const [linkStyle, changeLinkStyle] = useState({
+        fontSize: '1.5em',
+        color: '#00cccc',
+    }) 
+    
     
     const { work } = props
 
@@ -32,6 +37,20 @@ const WorkCards = (props) => {
                     )
                 }
             </div>
+            <div className='work-card-links-title'>
+                Project Links
+            </div>
+            <Row>
+            {
+                work.links.map( (project) => {
+                    return <Col span={2} key={project.link}>
+                        <a href={project.link} className='work-card-links'>
+                            <CustomIcons type={project.logo} IconStyles={linkStyle} />
+                        </a>
+                    </Col>
+                } )
+            }
+            </Row>
         </div>
     </Card>
 }

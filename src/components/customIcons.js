@@ -1,13 +1,21 @@
 import React from 'react'
 import { Icon } from 'antd'
 
-const DevpostSvg = (props) => (
-<svg version='1.0' xmlns='http://www.w3.org/2000/svg' width={props.fontSize} height={props.fontSize} viewBox='0 0 4630 4010' preserveAspectRatio='xMidYMid meet'>
-<g id='layer101' fill={props.fill} stroke='none'>
- <path d='M586 3005 c-317 -548 -576 -1000 -576 -1005 0 -5 259 -457 576 -1005 l576 -995 1158 0 1158 0 576 995 c317 548 576 1000 576 1005 0 5 -259 457 -576 1005 l-576 995 -1158 0 -1158 0 -576 -995z m1867 191 c321 -63 563 -198 729 -406 190 -237 271 -537 247 -922 -33 -545 -282 -891 -736 -1023 -177 -52 -243 -57 -745 -62 l-468 -5 0 1222 0 1222 448 -5 c343 -4 465 -9 525 -21z'/>
- <path d='M1950 2001 l0 -751 153 0 c264 0 393 22 527 87 139 67 229 185 282 368 20 72 23 101 23 280 0 179 -2 208 -23 280 -47 160 -137 289 -255 362 -142 89 -238 112 -509 120 l-198 6 0 -752z'/>
- </g>
-</svg>);
+const DevpostSvg = (props) => {
+var size = props.fontSize.substring(0, props.fontSize.length - 2);
+const iconHeightVal = size * 1.45
+const iconWidthVal = size * 2
+const iconHeight = iconHeightVal + 'em'
+const iconWidth = iconWidthVal + 'em'
+console.log(iconHeight, iconWidth)
+return (
+   <svg version='1.0' xmlns='http://www.w3.org/2000/svg' width={iconWidth} height={iconHeight} viewBox='0 0 4630 4010' preserveAspectRatio='xMidYMid meet'>
+   <g id='layer101' fill={props.fill} stroke='none'>
+   <path d='M586 3005 c-317 -548 -576 -1000 -576 -1005 0 -5 259 -457 576 -1005 l576 -995 1158 0 1158 0 576 995 c317 548 576 1000 576 1005 0 5 -259 457 -576 1005 l-576 995 -1158 0 -1158 0 -576 -995z m1867 191 c321 -63 563 -198 729 -406 190 -237 271 -537 247 -922 -33 -545 -282 -891 -736 -1023 -177 -52 -243 -57 -745 -62 l-468 -5 0 1222 0 1222 448 -5 c343 -4 465 -9 525 -21z'/>
+   <path d='M1950 2001 l0 -751 153 0 c264 0 393 22 527 87 139 67 229 185 282 368 20 72 23 101 23 280 0 179 -2 208 -23 280 -47 160 -137 289 -255 362 -142 89 -238 112 -509 120 l-198 6 0 -752z'/>
+   </g>
+</svg>
+)}
 
 const GithubSvg = (props) => (
    <svg version='1.0' xmlns='http://www.w3.org/2000/svg' width={props.fontSize} height={props.fontSize} 
@@ -144,17 +152,23 @@ export const LockoutIcon = ( props ) => <Icon type='key' style={props.IconStyles
 
 const CustomIcons = (props) => {
    switch(props.type) {
+      case 'github':
+         return <GithubIcon IconStyles={props.IconStyles} />;
+      case 'devpost':
+            return <DevpostIcon IconStyles={props.IconStyles} />;
+      case 'website':
+            return <WebsiteIcon IconStyles={props.IconStyles} />;
       case 'edunate':
          return <EdunateIcon IconStyles={props.IconStyles} />;
-         case 'finess':
+      case 'finess':
          return <FinessIcon IconStyles={props.IconStyles} />;
-         case 'subbey':
+      case 'subbey':
          return <SubbeyIcon IconStyles={props.IconStyles} />;
-         case 'lockout':
+      case 'lockout':
          return <LockoutIcon IconStyles={props.IconStyles} />;
-         case 'me':
+      case 'me':
          return <MeIcon IconStyles={props.IconStyles} />;
-         default:
+      default:
          return <Icon type='folder' style={props.IconStyles} />;
    }
 }
