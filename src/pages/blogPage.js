@@ -1,5 +1,5 @@
 import React from 'react' 
-import BlogCard from '../components/blogCards'
+// import BlogCard from '../components/blogCards'
 
 const BlogPage = ( ) => {
     return <div className='card-container'>
