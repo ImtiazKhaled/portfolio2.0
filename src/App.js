@@ -3,8 +3,11 @@ import './styles/App.css'
 import LandingPage from './pages/landingPage'
 import WhoPage from './pages/whoPage'
 import WorkPage from './pages/workPage'
+import BlogPage from './pages/blogPage'
 import ContactPage from './pages/contactPage'
 import { Switch, Row, Button, Col } from 'antd'
+import { BrowserRouter as Router, Switch as SwitchRouter, Route } from 'react-router-dom'
+
 
 const App = (props) => {
   
@@ -32,30 +35,54 @@ const App = (props) => {
     }
   }
 
-  return <div>
-      <Row>
-        <Col span={12}>
-          <div className='theme-container'>
-            {theme ? <span className='theme-identifier'> dark theme </span> : <span className='theme-identifier'> light theme </span>}
-            <Switch
-              className='theme-button'
-              checked={theme}
-              onChange={changeTheme}
-            />
-          </div>
-        </Col>
-        <Col span={12}>
-          <div className='resume-button-container'>
-            <Button href='https://drive.google.com/uc?export=download&id=1K7ron4NnobQEof6Wccj1W8QMn3aB0dyO' className='resume-button' icon='download' size={'large'}> Resume </Button>
-          </div>
-        </Col>
-      </Row>
-      <LandingPage />
-      <WhoPage />
-      <div style={{ minHeight: '25vh' }} />
-      <WorkPage />
-      <ContactPage />
-    </div>
+  return <Router>
+     <SwitchRouter>
+          <Route exact path="/blog">
+            <Row>
+              <Col span={12}>
+                <div className='theme-container'>
+                  {theme ? <span className='theme-identifier'> dark theme </span> : <span className='theme-identifier'> light theme </span>}
+                  <Switch
+                    className='theme-button'
+                    checked={theme}
+                    onChange={changeTheme}
+                  />
+                </div>
+              </Col>
+              <Col span={12}>
+                {/* <div className='resume-button-container'>
+                  <Button href='https://drive.google.com/uc?export=download&id=1K7ron4NnobQEof6Wccj1W8QMn3aB0dyO' className='resume-button' icon='download' size={'large'}> Resume </Button>
+                </div> */}
+              </Col>
+            </Row>
+            <BlogPage />
+          </Route>
+          <Route path="/">
+            <Row>
+              <Col span={12}>
+                <div className='theme-container'>
+                  {theme ? <span className='theme-identifier'> dark theme </span> : <span className='theme-identifier'> light theme </span>}
+                  <Switch
+                    className='theme-button'
+                    checked={theme}
+                    onChange={changeTheme}
+                  />
+                </div>
+              </Col>
+              <Col span={12}>
+                <div className='resume-button-container'>
+                  <Button href='https://drive.google.com/uc?export=download&id=1K7ron4NnobQEof6Wccj1W8QMn3aB0dyO' className='resume-button' icon='download' size={'large'}> Resume </Button>
+                </div>
+              </Col>
+            </Row>
+            <LandingPage />
+            <WhoPage />
+            <div style={{ minHeight: '25vh' }} />
+            <WorkPage />
+            <ContactPage />  
+          </Route>
+          </SwitchRouter>
+      </Router>
 }
 
 export default App
