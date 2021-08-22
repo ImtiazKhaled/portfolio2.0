@@ -11,9 +11,19 @@ export const who = [
             'My major GPA is 4.00, and my CGPA is 3.90 and.',
             'On campus I also hold one of the most pretegious leadership roles as a Resident Assistant.',
         ],
-    },
-    {
+    },{
         id: '2',
+        title: 'Web Application Developer, Intern',
+        subtitle: '@ayoka Systems',
+        subtitleLink: 'https://www.ayokasystems.com/',
+        duration: 'january 2020 - present',
+        description: [
+            'Ayoka being my second internship, the whole process was a lot less exhausting. Since, alot of the core principals were very similar to @blutech Solutions  I fit right into the company.',
+            'But, at Ayoka I had a lot more power on my hands, I was responsible for maintaining, and developing real projects taken on by the company.',
+            'I worked as a full-stack developer, on many differencet projects; and designed use cases, ERDs and swimlanes for some of them.'
+        ],
+    },{
+        id: '3',
         title: 'Intern Software Engineer',
         subtitle: '@blutech Solutions',
         subtitleLink: 'https://bluetechbd.com/',
@@ -23,9 +33,8 @@ export const who = [
             'I also got to experience the lifecyle of real world application.',
             'I worked on the frontend, state management, and backend-frontend interactions, of an accounting Web Application on React.'
         ],
-    },
-    {
-        id: '3',
+    },{
+        id: '4',
         title: 'Hackathon Enthusiast',
         subtitle: '@devpost',
         subtitleLink: 'https://devpost.com/ImtiazMujtabaKhaled?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav',
@@ -35,9 +44,8 @@ export const who = [
             'I like to spend as many weekends I can at hackathons, there is something in the competitive vibe that hackathons have, that keeps me going back.',
             'My Team and I have won most of the hackathons we have been too, and hope we will win even more of them in the future.'
         ],
-    },
-    {
-        id: '4',
+    },{
+        id: '5',
         title: 'Hobbyist',
         duration: 'also forever and always',
         description: [

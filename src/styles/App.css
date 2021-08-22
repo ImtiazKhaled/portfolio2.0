@@ -177,6 +177,11 @@ body {
     color: var(--link-color);
 }
 
+.work-card-links-title {
+    font-size: 1.6em;
+    color: var(--special-text-color-two);    
+}
+
 .work-card-subtitle:hover {
     color: var(--link-color-hover);
 }
@@ -189,6 +194,7 @@ body {
 .work-card-description {
     font-size: 1.5em;
     color: var(--normal-text-color);
+    margin-bottom: 15px;
 }
 
 .contact-normal {
@@ -217,6 +223,12 @@ body {
     color: var(--special-text-color);
 }
 
+.blog-title {
+    font-size: var(--text-size-contact);
+    color: var(--normal-text-color);
+    padding: 2vw
+}
+
 .card-container {
     padding: 1vw;
 }
@@ -225,3 +237,4 @@ body {
     background-color: transparent;
     border-color: transparent;
 }
+

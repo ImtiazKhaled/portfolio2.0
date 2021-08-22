@@ -1,21 +1,19 @@
-import React from 'react'
-import './styles/App.css'
+import React, { useState } from 'react'
+import './styles/app.css'
 import LandingPage from './pages/landingPage'
 import WhoPage from './pages/whoPage'
 import WorkPage from './pages/workPage'
 import ContactPage from './pages/contactPage'
 import { Switch, Row, Button, Col } from 'antd'
+import { DownloadOutlined } from '@ant-design/icons'
 
-class App extends React.Component {
-  state = {
-    theme: true
-  }
+const App = (props) => {
+  
+  const [theme, changeThemeState] = useState(true)
 
-  changeTheme = e => {
-    this.setState({
-      theme: !this.state.theme
-    })
-    if (this.state.theme) {
+  const changeTheme = (e) => {
+    changeThemeState(!theme)
+    if (theme) {
       document.body.style.setProperty('--background-color', '#eeeeee')
       document.body.style.setProperty('--link-color', '#e06c75')
       document.body.style.setProperty('--link-color-hover', '#986801')
@@ -35,34 +33,39 @@ class App extends React.Component {
     }
   }
 
-  render() {
-    return (
-      <div>
-        <Row>
-          <Col span={12}>
-            <div className='theme-container'>
-              {this.state.theme ? <span className='theme-identifier'> dark theme </span> : <span className='theme-identifier'> light theme </span>}
-              <Switch
-                className='theme-button'
-                checked={this.state.theme}
-                onChange={this.changeTheme}
-              />
-            </div>
-          </Col>
-          <Col span={12}>
-            <div className='resume-button-container'>
-              <Button href='https://drive.google.com/uc?export=download&id=1K7ron4NnobQEof6Wccj1W8QMn3aB0dyO' className='resume-button' icon='download' size={'large'}> Resume </Button>
-            </div>
-          </Col>
-        </Row>
-        <LandingPage />
-        <WhoPage />
-        <div style={{ minHeight: '25vh' }} />
-        <WorkPage />
-        <ContactPage />
-      </div>
-    )
-  }
+  return <div>
+      <Row>
+        <Col span={12}>
+          <div className='theme-container'>
+            {theme ? <span className='theme-identifier'> dark theme </span> : <span className='theme-identifier'> light theme </span>}
+            <Switch
+              className='theme-button'
+              checked={theme}
+              onChange={changeTheme}
+            />
+          </div>
+        </Col>
+        <Col span={12}>
+          <div className='resume-button-container'>
+            <Button 
+              href='https://storage.googleapis.com/imkkhld/portfolio-site/imtiaz-khaled-resume.pdf' 
+              className='resume-button' 
+              icon={
+                <DownloadOutlined />
+              } 
+              size={'large'}
+            > 
+              Resume 
+            </Button>
+          </div>
+        </Col>
+      </Row>
+      <LandingPage />
+      <WhoPage />
+      <div style={{ minHeight: '25vh' }} />
+      <WorkPage />
+      <ContactPage />
+    </div>
 }
 
 export default App
